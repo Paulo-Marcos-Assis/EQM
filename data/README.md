@@ -7,7 +7,7 @@ Conjuntos de dados construídos neste trabalho, organizados por etapa do pipelin
 | `classification/` | Classificação binária | Dataset completo (11.309 notícias rotuladas) + splits train/dev/test e consolidated deduplicado |
 | `extraction/` | Extração de Informação | Gold standard de 796 notícias anotadas (4 atributos) — 600 dev + 196 test |
 
-## Licença e ética
+## Ética
 
 - Os textos das notícias foram coletados de portais públicos de Santa Catarina e
   rotulados manualmente/automaticamente neste trabalho para fins de pesquisa.

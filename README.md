@@ -74,7 +74,3 @@ cd 4-linkage && pip install -r requirements.txt && make bench-both && make dev &
 
 Hardware usado: AMD EPYC 9654 (96 núcleos, 1,5 TB RAM) + NVIDIA RTX A6000 (48 GB VRAM,
 CUDA 12.8); modelos via Ollama (`gpt-oss:20b`, `qwen2.5:7b`).
-
-## Licença
-
-Código sob MIT (ver `LICENSE`). Dados para fins de pesquisa (ver `data/README.md`).
