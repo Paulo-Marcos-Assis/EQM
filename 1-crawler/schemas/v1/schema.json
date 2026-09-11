@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "data_source": {
+      "const": "noticias"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "entity_type": {
+      "type": "string"
+    },
+    "start_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "end_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "portal": {
+          "type": "string"
+        },
+        "page_1_url": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "portal"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "data_source",
+    "url",
+    "entity_type",
+    "start_date",
+    "end_date",
+    "parameters"
+  ],
+  "additionalProperties": false
+}

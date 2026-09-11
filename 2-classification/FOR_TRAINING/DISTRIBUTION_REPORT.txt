@@ -1,0 +1,46 @@
+============================================================
+RELATÓRIO DE DISTRIBUIÇÃO — NEW_EQM_Classifier (Task 1)
+============================================================
+
+Dataset original: Complete_dataset_11309.csv
+Dataset consolidado: CONSOLIDATED_EQM.csv
+Shape inicial: 11309 linhas
+Shape final (após dedup link + filtro >200 chars): 11133 linhas
+Links nulos tratados: 30 (mantidos como '')
+Links duplicados removidos (keep='first'): 159
+Amostras removidas por texto <= 200 chars: 17
+Duplicatas textuais (similaridade >= 0.9) marcadas: 726
+
+--- DISTRIBUIÇÃO DE LABEL ---
+label=0: 10195 (91.57%)
+label=1: 938 (8.43%)
+
+Razão de classes (neg:pos): 10195 : 938
+
+--- COMPRIMENTO DO TEXTO COMPLETO (titulo + texto) ---
+          mean  median  min    max
+label                             
+0      3955.86  3107.0  213  89983
+1      3072.01  2591.0  241  26451
+
+--- TABELA PORTAL × LABEL (top 10 portais) ---
+                       Total  Pos   Neg   Pos%
+portal                                        
+nsctotal.com.br         8572   32  8540    0.4
+ndmais.com.br            829  728   101   87.8
+bbc.com                  784    0   784    0.0
+jornalconexao.com.br     189    4   185    2.1
+gazetadopovo.com.br      168    1   167    0.6
+cartacapital.com.br      151    0   151    0.0
+tvbv.com.br               96    2    94    2.1
+ocp.news                  91    2    89    2.2
+mpsc.mp.br                53   53     0  100.0
+www1.folha.uol.com.br     44    0    44    0.0
+
+--- FILTRO COMBINADO (<= 200 chars) ---
+Amostras removidas: 17
+Amostras mantidas: 11133
+Percentual removido: 0.15%
+
+Nota: linhas com texto_completo <= 200 caracteres foram EXCLUÍDAS do pipeline.
+Esta regra é aplicada antes do split para evitar vazamento (leakage) de dados pequenos.

@@ -1,0 +1,62 @@
+============================================================
+SPLIT REPORT — NEW_EQM_Classifier (Task 2, post-1a-1d re-run)
+============================================================
+
+Input: CONSOLIDATED_EQM_DEDUPED.csv (10379 rows, post rigorous 1a-1d)
+Random seed: 42
+Split ratio: 80/20 (traindev/test) → 80/20 (train/dev)
+
+--- DEDUP REMOVALS (cross-split) ---
+Link dedup: dev=0, test=0
+Text dedup (hash, non-dup-in-train only): dev=0, test=0
+Embedding dedup (BERT Base cos>=0.99): dev=18, test=30
+
+--- FINAL SPLIT DISTRIBUTION ---
+Train (64%): 6642 rows | pos=590 (8.88%) | neg=6052
+Dev (16%): 1643 rows | pos=148 (9.01%) | neg=1495
+Test (20%): 2046 rows | pos=180 (8.80%) | neg=1866
+
+Total after splits: 10331 rows
+Removed by dedup: 48 rows
+
+--- LINK OVERLAP (zero leakage expected) ---
+Train ∩ Dev: 0 links
+Train ∩ Test: 0 links
+Dev ∩ Test: 0 links
+
+--- PORTAL DISTRIBUTION (top 5 per split) ---
+
+Train:
+                      count
+portal                     
+nsctotal.com.br        5040
+ndmais.com.br           532
+bbc.com                 499
+jornalconexao.com.br    127
+gazetadopovo.com.br     103
+
+Dev:
+                      count
+portal                     
+nsctotal.com.br        1255
+ndmais.com.br           126
+bbc.com                 108
+gazetadopovo.com.br      32
+jornalconexao.com.br     29
+
+Test:
+                      count
+portal                     
+nsctotal.com.br        1540
+bbc.com                 165
+ndmais.com.br           163
+jornalconexao.com.br     33
+gazetadopovo.com.br      33
+
+--- METHODOLOGY NOTE ---
+Tripartite holdout (train/dev/test) + internal CV is the ML standard.
+Raschka, 'Model Selection vs Assessment':
+  - Train (64%): fitting + HPO
+  - Dev (16%): selection validation (compare 12 combos + threshold)
+  - Test (20%): isolated, used only once in Task 7
+Auxiliary columns preserved: portal, texto_completo, texto_len, is_text_duplicate, original_index

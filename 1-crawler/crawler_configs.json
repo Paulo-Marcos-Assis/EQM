@@ -1,0 +1,490 @@
+{
+ "ndmais": {
+  "min_page": 1,
+  "link_finder": {
+   "tag": "a",
+   "attrs": {
+    "class": "title-text"
+   },
+   "href_excludes": [
+    "/video/"
+   ]
+  },
+  "article_selectors": {
+   "title": {
+    "tag": "h1"
+   },
+   "subtitle": {
+    "tag": "p",
+    "attrs": {
+     "class": "subtitle"
+    }
+   },
+   "content": {
+    "tag": "div",
+    "attrs": {
+     "class": "entry-content"
+    },
+    "find_all": [
+     "p",
+     "h2",
+     "h3"
+    ]
+   },
+   "date": [
+    {
+     "tag": "div",
+     "attrs": {
+      "class": "publicacao text-uppercase"
+     }
+    },
+    {
+     "tag": "time",
+     "attrs": {
+      "class": "dt-published"
+     },
+     "attribute": "datetime"
+    },
+    {
+     "tag": "span",
+     "attrs": {
+      "class": "metadata date"
+     }
+    }
+   ]
+  },
+  "date_parser": "iso_or_portuguese"
+ },
+ "nsc": {
+  "min_page": 1,
+  "link_finder": {
+   "tag": "a",
+   "attrs": {
+    "class": "list__card-media"
+   },
+   "href_prefixes": [
+    "https://www.nsctotal.com.br/"
+   ]
+  },
+  "article_selectors": {
+   "title": {
+    "tag": "h1"
+   },
+   "subtitle": {
+    "tag": "div",
+    "attrs": {
+     "class": "excerpt"
+    }
+   },
+   "content": {
+    "find_all": [
+     "p",
+     "h2",
+     "h3"
+    ]
+   },
+   "date": [
+    {
+     "tag": "time",
+     "attribute": "datetime"
+    },
+    {
+     "tag": "span",
+     "attrs": {
+      "class": "date"
+     }
+    },
+    {
+     "tag": "div",
+     "attrs": {
+      "class": "date"
+     }
+    },
+    {
+     "tag": "div",
+     "attrs": {
+      "class": "date mb-3"
+     }
+    },
+    {
+     "tag": "p",
+     "attrs": {
+      "class": "date mb-3"
+     }
+    }
+   ]
+  },
+  "date_parser": "iso_or_portuguese"
+ },
+ "jornalconexao": {
+  "min_page": 1,
+  "link_finder": {
+   "tag": "a",
+   "attrs": {
+    "class": "listagem-interna"
+   }
+  },
+  "article_selectors": {
+   "title": {
+    "tag": "h1"
+   },
+   "subtitle": {
+    "tag": "h2"
+   },
+   "content": {
+    "tag": "div",
+    "attrs": {
+     "class": "texto"
+    },
+    "find_all": [
+     "p",
+     "h2",
+     "h3"
+    ]
+   },
+   "date": [
+    {
+     "tag": "div",
+     "attrs": {
+      "class": "data-post"
+     }
+    }
+   ]
+  },
+  "date_parser": "other_format"
+ },
+ "olharsc": {
+  "min_page": 1,
+  "link_finder": {
+   "tag": "a",
+   "attrs": {
+    "rel": "bookmark"
+   },
+   "container": {
+    "tag": "div",
+    "attrs": {
+     "class": "tdb_module_loop"
+    }
+   }
+  },
+  "article_selectors": {
+   "title": {
+    "tag": "h1",
+    "attrs": {
+     "class": "entry-title"
+    }
+   },
+   "content": {
+    "tag": "div",
+    "attrs": {
+     "class": "td-post-content"
+    },
+    "find_all": [
+     "p",
+     "h2",
+     "h3"
+    ]
+   },
+   "date": [
+    {
+     "tag": "time",
+     "attrs": {
+      "class": "entry-date"
+     },
+     "attribute": "datetime"
+    }
+   ]
+  },
+  "date_parser": "iso_or_portuguese"
+ },
+ "tvbv": {
+  "min_page": 1,
+  "max_page": 2033,
+  "link_finder": {
+   "tag": "a",
+   "container": {
+    "tag": "div",
+    "attrs": {
+     "class": "rt-grid-item"
+    }
+   },
+   "href_prefixes": [
+    "https://www.tvbv.com.br/"
+   ],
+   "href_excludes": [
+    "/category/",
+    "/tag/",
+    "/page/",
+    "wp-content"
+   ]
+  },
+  "article_selectors": {
+   "title": {
+    "tag": "h1",
+    "attrs": {
+     "class": "entry-title"
+    }
+   },
+   "content": {
+    "tag": "div",
+    "attrs": {
+     "class": "entry-content"
+    },
+    "find_all": [
+     "p",
+     "h2",
+     "h3"
+    ]
+   },
+   "date": [
+    {
+     "tag": "li",
+     "attrs": {
+      "class": "post-date"
+     }
+    },
+    {
+     "tag": "div",
+     "attrs": {
+      "class": "entry-date"
+     }
+    }
+   ]
+  },
+  "date_parser": "other_format"
+ },
+ "portaldelicitacao": {
+  "min_page": 1,
+  "max_page": 500,
+  "link_finder": {
+   "tag": "a",
+   "href_prefixes": [
+    "https://portaldelicitacao.com.br/2019/noticias/"
+   ],
+   "href_excludes": [
+    "/page/",
+    "/category/",
+    "/tag/",
+    "/author/"
+   ]
+  },
+  "article_selectors": {
+   "title": {
+    "tag": "h1",
+    "attrs": {
+     "class": "elementor-heading-title"
+    }
+   },
+   "content": {
+    "tag": "article",
+    "find_all": [
+     "p",
+     "h2",
+     "h3"
+    ]
+   },
+   "date": [
+    {
+     "tag": "time",
+     "attrs": {
+      "class": "entry-date"
+     }
+    }
+   ]
+  },
+  "date_parser": "iso_or_portuguese"
+ },
+ "ocpnews": {
+  "min_page": 1,
+  "link_finder": {
+   "tag": "a",
+   "href_prefixes": [
+    "https://ocp.news/cotidiano/",
+    "https://ocp.news/informe/",
+    "https://ocp.news/economia/",
+    "https://ocp.news/politica/",
+    "https://ocp.news/esporte/",
+    "https://ocp.news/entretenimento/",
+    "https://ocp.news/seguranca/"
+   ]
+  },
+  "article_selectors": {
+   "title": {
+    "tag": "h1",
+    "attrs": {
+     "class": "title"
+    }
+   },
+   "content": {
+    "tag": "section",
+    "attrs": {
+     "class": "pt-4"
+    },
+    "find_all": [
+     "p",
+     "h2",
+     "h3"
+    ]
+   },
+   "date": [
+    {
+     "tag": "p",
+     "attrs": {
+      "class": "date"
+     }
+    }
+   ]
+  },
+  "date_parser": "dmy"
+ },
+ "iclnoticias": {
+  "min_page": 1,
+  "max_page": 10,
+  "skip_binary_search": true,
+  "link_finder": {
+   "tag": "a",
+   "attrs": {
+    "class": "text-main-dark"
+   },
+   "href_prefixes": [
+    "https://iclnoticias.com.br/"
+   ]
+  },
+  "article_selectors": {
+   "title": {
+    "tag": "h1"
+   },
+   "content": {
+    "tag": "article",
+    "find_all": [
+     "p",
+     "h2",
+     "h3"
+    ]
+   },
+   "date": [
+    {
+     "tag": "time",
+     "attribute": "datetime"
+    }
+   ]
+  },
+  "date_parser": "iso_or_portuguese"
+ },
+ "g1sc": {
+  "min_page": 1,
+  "max_page": 10,
+  "skip_binary_search": true,
+  "link_finder": {
+   "tag": "a",
+   "href_prefixes": [
+    "https://g1.globo.com/sc/santa-catarina/noticia/"
+   ],
+   "href_excludes": [
+    "/video"
+   ]
+  },
+  "article_selectors": {
+   "title": {
+    "tag": "h1",
+    "attrs": {
+     "class": "content-head__title"
+    }
+   },
+   "content": {
+    "tag": "div",
+    "attrs": {
+     "class": "mc-article-body"
+    },
+    "find_all": [
+     "p",
+     "h2",
+     "h3"
+    ]
+   },
+   "date": [
+    {
+     "tag": "time",
+     "attrs": {
+      "itemprop": "datePublished"
+     },
+     "attribute": "datetime"
+    }
+   ]
+  },
+  "date_parser": "iso_or_portuguese"
+ },
+ "bbcportuguese": {
+  "min_page": 1,
+  "max_page": 100,
+  "skip_binary_search": true,
+  "link_finder": {
+   "tag": "a",
+   "href_prefixes": [
+    "https://www.bbc.com/portuguese/articles/"
+   ]
+  },
+  "article_selectors": {
+   "title": {
+    "tag": "h1"
+   },
+   "content": {
+    "find_all": [
+     "p"
+    ]
+   },
+   "date": [
+    {
+     "tag": "time",
+     "attribute": "datetime"
+    }
+   ]
+  },
+  "date_parser": "iso_or_portuguese"
+ },
+ "scempauta": {
+  "min_page": 1,
+  "max_page": 876,
+  "link_finder": {
+   "tag": "a",
+   "href_prefixes": [
+    "https://www.santacatarinaempauta.com.br/2026/"
+   ],
+   "href_excludes": [
+    "/page/",
+    "/category/",
+    "/tag/",
+    "/author/"
+   ]
+  },
+  "article_selectors": {
+   "title": {
+    "tag": "h1",
+    "attrs": {
+     "class": "elementor-heading-title"
+    }
+   },
+   "content": {
+    "tag": "article",
+    "find_all": [
+     "p",
+     "h2",
+     "h3"
+    ]
+   },
+   "date": [
+    {
+     "tag": "meta",
+     "attrs": {
+      "property": "article:published_time"
+     },
+     "attribute": "content"
+    },
+    {
+     "tag": "time"
+    }
+   ]
+  },
+  "date_parser": "iso_or_portuguese"
+ }
+}

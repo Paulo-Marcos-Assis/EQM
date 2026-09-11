@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.venv/
+venv/
+env/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# Segredos / ambiente
+.env
+.env.local
+.env.*.local
+*.secret.yaml
+
+# Notebooks
+.ipynb_checkpoints/
+
+# IDE / OS
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Artifacts gerados pelos scripts (regeneráveis)
+2-classification/vectorization/*
+2-classification/training/results/*
+!2-classification/vectorization/.gitkeep
+!2-classification/training/results/.gitkeep
+
+# Arquivos grandes do linkage (a política de cada subpasta está em 4-linkage/.gitignore)
+4-linkage/data/*.csv
+4-linkage/noticias_simuladas/*.csv

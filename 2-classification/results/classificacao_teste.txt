@@ -1,0 +1,19 @@
+Task 7 — Final Test Evaluation
+Best model: tfidf/base + linear_svc
+
+  f1: 0.9563
+  precision: 0.9409
+  recall: 0.9722
+  accuracy: 0.9922
+  pr_auc: 0.9905
+  roc_auc: 0.9991
+
+              precision    recall  f1-score   support
+
+           0       1.00      0.99      1.00      1866
+           1       0.94      0.97      0.96       180
+
+    accuracy                           0.99      2046
+   macro avg       0.97      0.98      0.98      2046
+weighted avg       0.99      0.99      0.99      2046
+

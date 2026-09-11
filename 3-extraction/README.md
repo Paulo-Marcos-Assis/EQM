@@ -1,0 +1,5 @@
+# ***Information Extraction from Brazilian News Articles on Public Procurement Fraud***
+
+paulo.marcos@grad.ufsc.br, {marcio.castro, jonata.tyska}@ufsc.br
+
+*Abstract. Combating fraud in public procurement is a critical task for oversight agencies. While journalistic coverage can offers a rich source of early warning signals, its unstructured nature hinders automated auditing. To bridge this gap, we propose an Information Extraction (IE) pipeline to extract four key entities required for administrative linkage: municipality, procurement modality, notice number, and contract object. We evaluate three extraction approaches: (1) a Hybrid-Heuristic baseline; (2) a Retrieval-Augmented Generation (RAG) framework; and (3) an End-to-End Structured Large Language Model (LLM). Results demonstrate that the structured LLM significantly outperforms modular baselines, achieving an average accuracy of 91.45% across the four attributes. Furthermore, we introduce a gold-standard dataset of 796 annotated articles. All experiments are reproducible.*

@@ -1,0 +1,21 @@
+{
+  "best_model": "tfidf/base + linear_svc",
+  "test_metrics": {
+    "f1": 0.9562841530054644,
+    "precision": 0.9408602150537635,
+    "recall": 0.9722222222222222,
+    "accuracy": 0.9921798631476051,
+    "pr_auc": 0.9904842861554762,
+    "roc_auc": 0.9991425509110397
+  },
+  "dev_metrics": {
+    "f1": 0.9764,
+    "precision": 0.9732,
+    "recall": 0.9797,
+    "accuracy": 0.9957,
+    "pr_auc": 0.9973,
+    "roc_auc": 0.9997
+  },
+  "link_overlap_train_test": 0,
+  "link_overlap_dev_test": 0
+}

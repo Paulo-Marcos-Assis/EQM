@@ -1,0 +1,12 @@
+pyarrow 
+boto3 
+python-dotenv 
+s3fs
+pika
+pandas
+Minio
+sentry_sdk==0.10.2
+requests
+beautifulsoup4==4.13.5
+tqdm
+pymongo

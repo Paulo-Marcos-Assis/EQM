@@ -1,0 +1,7 @@
+=== SOURCE === 11133 rows | pos=938 | neg=10195
+1a URL exact: removed 0 -> 11133
+1b Title exact (norm): removed 4 -> 11129
+1c texto_noticia exact (norm): removed 1 -> 11128
+1d TF-IDF near-dup (cos>=0.90): removed 749 -> 10379
+=== FINAL CLEAN (1a-1d) === 10379 rows | pos=922 | neg=9457 | ratio=10.26
+Saved: /home/paulo/CascadeProjects/Applied_ML/NEW_EQM_Classifier/FOR_TRAINING/CONSOLIDATED_EQM_DEDUPED.csv
