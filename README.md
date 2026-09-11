@@ -17,11 +17,22 @@ promovendo a reprodutibilidade e o reuso pela comunidade científica.
 > comunidade científica. — *Objetivo específico 5 da dissertação.*
 
 Artigos:
-- **SBBD 2026** — *Information Extraction from Brazilian News Articles on Public
-  Procurement Fraud* → `3-extraction/` e
+- **ERAMIA-RS 2025** (publicado) — ASSIS, Paulo Marcos de; CASTRO, Márcio; CARVALHO,
+  Jônata Tyska. *Machine Learning-Based Classification of Portuguese News Articles on
+  Public Procurement Fraud.* In: Anais da I Escola Regional de Aprendizado de Máquina e
+  Inteligência Artificial da Região Sul (ERAMIA-RS 2025). Porto Alegre: Sociedade
+  Brasileira de Computação, 2025. p. 88–91. DOI: [10.5753/eramiars.2025.16668](https://doi.org/10.5753/eramiars.2025.16668).
+  → estágio de classificação deste repositório (`2-classification/`, `data/classification/`).
+- **SBBD 2026** (aceito para publicação) — ASSIS, Paulo Marcos de; CASTRO, Márcio;
+  CARVALHO, Jônata Tyska. *Information Extraction from Brazilian News Articles on Public
+  Procurement Fraud.* In: Anais do 41º Simpósio Brasileiro de Bancos de Dados (SBBD).
+  2026. No prelo. → `3-extraction/` e
   [comparative-information-extraction](https://github.com/Paulo-Marcos-Assis/comparative-information-extraction).
-- **ENIAC 2026** — *A Hybrid RAG Pipeline for Linking Fraud News to Public Procurement
-  Records* → `4-linkage/` e
+- **ENIAC 2026** (aceito para publicação) — ASSIS, Paulo Marcos de; CASTRO, Márcio;
+  CARVALHO, Jônata Tyska. *A Hybrid RAG Pipeline for Linking Fraud News to Public
+  Procurement Records.* In: Anais do 23º Encontro Nacional de Inteligência Artificial e
+  Computacional (ENIAC). Porto Alegre: Sociedade Brasileira de Computação, 2026. No prelo.
+  → `4-linkage/` e
   [rag-linkage-paper](https://github.com/Paulo-Marcos-Assis/rag-linkage-paper).
 
 ## Estrutura
