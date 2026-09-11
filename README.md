@@ -87,4 +87,4 @@ Hardware usado: AMD EPYC 9654 (96 núcleos, 1,5 TB RAM) + NVIDIA RTX A6000 (48 G
 CUDA 12.8). Modelos via Ollama: `gpt-oss:20b`, `gemma4:31b`, `qwen3.8:27b`,
 `qwen3.5:latest`, `qwen2.5:7b` (avaliados; variantes também exploradas `qwen2.5:14b`,
 `qwen3:8b`, `gemma3:12b`). Embeddings de recuperação: `bert-base-portuguese-cased`,
-`neuralmind/bert-large-portuguese-cased` e `pucpr/heibert`.
+`neuralmind/bert-large-portuguese-cased` e `tcepi/helbert-base` (HelBERT).
