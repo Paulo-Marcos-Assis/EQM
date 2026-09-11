@@ -22,10 +22,15 @@ TF-IDF de 10.000 features. Erros no teste: 16 (11 FP / 5 FN). Detalhes em
 `results/CONSOLIDATED_FINAL.md` e `results/`.
 
 **Por que TF-IDF + SVM (e não BERT):** no experimento de viés de domínio
-(`task8_domain_bias`), modelos BERTimbau treinados só em `ndmais` atingiram F1 1,0
-no domínio, mas F1 0,36–0,40 em 66 outros portais (colapso). O TF-IDF + LinearSVC
-perdeu ~nada (0,961 → 0,965). O modelo aprende o *conceito* de fraude
-(lexical), não o estilo editorial.
+(`results/cross_portal_REPORT_FINAL.md`), os 4 melhores modelos NDMAIS_BIAS
+(BERTimbau treinado **somente** em `ndmais.com.br`, dev F1 = 1,0 no domínio)
+foram avaliados em 5 subsets disjuntos de 438 notícias cada, sorteados do pool
+**não-ndmais (9.555 linhas, 73 portais; 25–29 portais por subset)**. Os 3 modelos
+lineares colapsaram para F1 0,36–0,40 (Large+SVC 0,364; Large+LR 0,368; Base+SVC
+0,384; Base+LR 0,401); os RandomForest seguraram melhor (Base 0,869; Large 0,699 —
+relatório dos 12 combos). Já o TF-IDF + LinearSVC (multi-portal) **manteve** o
+desempenho: F1 0,961 (ndmais) → 0,965 cross-portal (Δ +0,004). O modelo aprende o
+*conceito* de fraude (lexical), não o estilo editorial.
 
 ## Pipeline (scripts)
 
@@ -38,7 +43,7 @@ perdeu ~nada (0,961 → 0,965). O modelo aprende o *conceito* de fraude
 | `task4_vectorize.py` | TF-IDF + BERTimbau (média dos tokens) |
 | `task5_train.py` | Treino das 12–16 combinações (GridSearch C, StratifiedKFold) |
 | `task7_final_test.py` | Avaliação isolada no teste (Task 7) |
-| `task8_domain_bias.py` | Experimento de viés de domínio (ndmais → 66 portais) |
+| `task8_domain_bias.py` | Viés de domínio (NDMAIS→cross-portal) + atribuição de features |
 | `task9_consolidate.py` | Consolida resultados |
 
 Os scripts resolvem o caminho raiz do projeto a partir da própria localização do
@@ -61,9 +66,9 @@ python scripts/task7_final_test.py
 python scripts/task8_domain_bias.py
 ```
 
-Para reproduzir somente o prompt final (124)
-consulte `results/` (artefatos do modelo vencedor: `linear_svc_modelo_final.pkl`,
-`best_params.json`, `classificacao_teste.txt`, `resumo_teste.json`).
+Para reproduzir somente o modelo vencedor consulte `results/` (artefatos do
+modelo final: `linear_svc_modelo_final.pkl`, `best_params.json`,
+`classificacao_teste.txt`, `resumo_teste.json`).
 
 ## Hardware / ambiente de execução
 

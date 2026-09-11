@@ -55,9 +55,13 @@ EQM/
 2. **Classificação** (`2-classification/`) — vencedor: TF-IDF + LinearSVC
    (dev F1 0,9764; test F1 0,9563; robusto cross-portal).
 3. **Extração** (`3-extraction/`) — 3 abordagens; melhor: LLM estruturado
-   (acurácia média 91,45%; F1 89,46%).
+   (acurácia média strict match 91,45%; F1 médio 89,86% — média dos 4 atributos,
+   Tabela 3 do SBBD; ver `data/extraction/DOCUMENTACAO.md` para as métricas
+   recalculadas com a validação manual do objeto).
 4. **Vinculação** (`4-linkage/`) — híbrido RAG: extração LLM + pré-filtro SQL +
-   recuperação TF-IDF + rerank LLM (single-call `gpt-oss:20b` 76,8% dev / 71,5% test).
+   recuperação TF-IDF + rerank LLM (single-call `gpt-oss:20b` 76,8% dev /
+   76,2% test, 163/214; melhor no teste entre os cinco modelos avaliados:
+   `gemma4:31b`, 78,5% — ver `4-linkage/results/README.md`).
 
 ## Datasets
 
