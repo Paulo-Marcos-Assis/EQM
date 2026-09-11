@@ -24,8 +24,9 @@ TF-IDF de 10.000 features. Erros no teste: 16 (11 FP / 5 FN). Detalhes em
 **Por que TF-IDF + SVM (e não BERT):** no experimento de viés de domínio
 (`results/cross_portal_REPORT_FINAL.md`), os 4 melhores modelos NDMAIS_BIAS
 (BERTimbau treinado **somente** em `ndmais.com.br`, dev F1 = 1,0 no domínio)
-foram avaliados em 5 subsets disjuntos de 438 notícias cada, sorteados do pool
-**não-ndmais (9.555 linhas, 73 portais; 25–29 portais por subset)**. Os 3 modelos
+foram avaliados em 5 subsets disjuntos de 438 notícias cada (2.190 no total),
+sorteados do pool **não-ndmais (9.555 linhas, 73 portais no pool; os subsets
+abrangem 66 portais distintos — 25–29 portais por subset)**. Os 3 modelos
 lineares colapsaram para F1 0,36–0,40 (Large+SVC 0,364; Large+LR 0,368; Base+SVC
 0,384; Base+LR 0,401); os RandomForest seguraram melhor (Base 0,869; Large 0,699 —
 relatório dos 12 combos). Já o TF-IDF + LinearSVC (multi-portal) **manteve** o

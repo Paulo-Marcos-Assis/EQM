@@ -91,7 +91,7 @@ cd 4-linkage && pip install -r requirements.txt && make bench-both && make dev &
 
 Hardware usado: AMD EPYC 9654 (96 núcleos, 1,5 TB RAM) + NVIDIA RTX A6000 (48 GB VRAM,
 CUDA 12.8). Modelos via Ollama: `gpt-oss:20b`, `gemma4:31b`, `qwen3.8:27b`,
-`qwen3.5:latest`, `qwen2.5:7b` (avaliados no rerank; variantes também exploradas
+`qwen3.5:9b`, `qwen2.5:7b` (avaliados no rerank; variantes também exploradas
 `qwen2.5:14b` e `qwen3:8b` nos scripts, e `gemma3:12b` na extração auxiliar de
 município/modalidade do benchmark de teste). Embeddings de recuperação:
 `bert-base-portuguese-cased`, `neuralmind/bert-large-portuguese-cased` e

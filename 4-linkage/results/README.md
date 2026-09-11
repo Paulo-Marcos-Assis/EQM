@@ -11,7 +11,7 @@ questão ética, o benchmark sintético (714 pares) não é publicado.
 |---|---|---|
 | `single_call_top10_n500_gpt-oss_20b.json` | Dev single-call 20B | **76.8%** (384/500) |
 | `single_call_top10_n500_qwen2.5_7b.json` | Dev single-call 7B | 65.2% |
-| `single_call_top10_n500_qwen3.5_latest.json` | Dev single-call 9B | 76.6% |
+| `single_call_top10_n500_qwen3.5_9b.json` | Dev single-call 9B | 76.6% |
 | `single_call_top10_n500_qwen3.8_27b.json` | Dev single-call 27B | **77.2%** |
 | `single_call_top10_n500_gemma4_31b.json` | Dev single-call 31B | 76.0% |
 | `tournament_top10_n500_qwen2.5_7b.json` | Dev tournament 7B | 66.2% |
@@ -20,7 +20,7 @@ questão ética, o benchmark sintético (714 pares) não é publicado.
 | `tournament_top10_n500_gemma4_31b.json` | Dev tournament 31B | 60.4% |
 | `tournament_n500_gpt-oss_20b.json` | Dev tournament 20B (n=50) | colapsou (falha 41,4%) |
 | `single_call_top10_n214_test_gpt-oss_20b.json` | Test single-call 20B | 76.2% (163/214) |
-| `single_call_top10_n214_test_qwen3.5_latest.json` | Test single-call 9B | 75.7% |
+| `single_call_top10_n214_test_qwen3.5_9b.json` | Test single-call 9B | 75.7% |
 | `single_call_top10_n214_test_qwen3.8_27b.json` | Test single-call 27B | 78.0% |
 | `single_call_top10_n214_test_gemma4_31b.json` | Test single-call 31B | **78.5%** (melhor no teste) |
 

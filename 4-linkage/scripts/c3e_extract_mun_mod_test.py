@@ -8,14 +8,14 @@ C3 do paper/EQM/tracking_experimentos_dissertacao.md:
 No dataset de teste atual, município/modalidade foram COPIADOS do gold
 (fonte: fast_object_only_gpt-oss:20b), então o filtro SQL nunca foi
 avaliado honestamente no teste. Este script re-extrai OS MESMOS atributos
-a partir do TEXTO das notícias com um segundo modelo (qwen3.5:latest,
+a partir do TEXTO das notícias com um segundo modelo (qwen3.5:9b,
 variabilidade D2), usando o MESMO FeatureExtractor do experimento das 500
 (prompt completo, temperatura 0, primeiro elemento da lista = valor usado).
 
 Não sobrescreve dataset_214_noticias_test.json — gera arquivo separado.
 
 Uso:
-    OLLAMA_HOST=https://ollama.ceos.ufsc.br OLLAMA_MODEL=qwen3.5:latest \
+    OLLAMA_HOST=https://ollama.ceos.ufsc.br OLLAMA_MODEL=qwen3.5:9b \
         python scripts/c3e_extract_mun_mod_test.py [--limit N]
 """
 

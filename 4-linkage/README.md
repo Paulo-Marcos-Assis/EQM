@@ -23,7 +23,7 @@ This repository contains the complete code, prompts, and configurations to repro
 | TF-IDF vs Neural (R@50) | +57.3 pp | — |
 
 > A versão final do paper (ENIAC) reporta 76.8% dev / 76.2% test (163/214) para o
-> single-call 20B. A dissertação avaliou adicionalmente os modelos `qwen3.5:latest`,
+> single-call 20B. A dissertação avaliou adicionalmente os modelos `qwen3.5:9b`,
 > `qwen3.8:27b` e `gemma4:31b`; no teste, o melhor foi `gemma4:31b` (78.5%) seguido
 > de `qwen3.8:27b` (78.0%). Resultados completos em `results/README.md`.
 

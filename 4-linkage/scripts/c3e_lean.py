@@ -9,7 +9,7 @@ compartilhado. Prompt enxuto (só município/modalidade/edital/objeto).
 Produz a MESMA estrutura de saída do FeatureExtractor → reaproveita checkpoint.
 
 Uso:
-    OLLAMA_HOST=https://ollama.ceos.ufsc.br OLLAMA_MODEL=qwen3.5:latest \
+    OLLAMA_HOST=https://ollama.ceos.ufsc.br OLLAMA_MODEL=qwen3.5:9b \
         python3 scripts/c3e_lean.py [opções]
     --limit N   (debug)
     --resume    (usa checkpoint; default on)
@@ -23,7 +23,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).parent.parent
 OLLAMA_HOST = os.getenv("OLLAMA_HOST", "http://localhost:11434").rstrip("/")
-SELECTED_MODEL = os.getenv("OLLAMA_MODEL", "qwen3.5:latest")
+SELECTED_MODEL = os.getenv("OLLAMA_MODEL", "qwen3.5:9b")
 PER_CALL_TIMEOUT = 90          # s, timeout do ChatOllama
 RETRIES_DEFAULT = 3
 

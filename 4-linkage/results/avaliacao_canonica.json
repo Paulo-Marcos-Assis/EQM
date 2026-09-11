@@ -91,8 +91,8 @@
       "ganho_vs_tfidf_p1_top10_equiv": -0.041999999999999926,
       "mrr_armazenado_artefato": 1.0
     },
-    "results/single_call_top10_n500_qwen3.5_latest.json": {
-      "arquivo": "results/single_call_top10_n500_qwen3.5_latest.json",
+    "results/single_call_top10_n500_qwen3.5_9b.json": {
+      "arquivo": "results/single_call_top10_n500_qwen3.5_9b.json",
       "n_itens": 500,
       "zerados": 10,
       "falhas": 9,
@@ -147,8 +147,8 @@
       "ganho_vs_tfidf_p1_top10_equiv": 0.05607476635514019,
       "mrr_armazenado_artefato": 1.0
     },
-    "results/single_call_top10_n214_test_qwen3.5_latest.json": {
-      "arquivo": "results/single_call_top10_n214_test_qwen3.5_latest.json",
+    "results/single_call_top10_n214_test_qwen3.5_9b.json": {
+      "arquivo": "results/single_call_top10_n214_test_qwen3.5_9b.json",
       "n_itens": 214,
       "zerados": 4,
       "falhas": 0,
