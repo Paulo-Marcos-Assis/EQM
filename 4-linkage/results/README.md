@@ -24,9 +24,10 @@ questão ética, o benchmark sintético (714 pares) não é publicado.
 | `single_call_top10_n214_test_qwen3.8_27b.json` | Test single-call 27B | 78.0% |
 | `single_call_top10_n214_test_gemma4_31b.json` | Test single-call 31B | **78.5%** (melhor no teste) |
 
-Recuperação TF-IDF (baseline): dev R@50 96.0% (480/500), R@1 60.2%; test R@50
-97.2% (208/214), R@1 65.9%. Em 12 das 214 notícias o ouro não está no top-10
-(limite estrutural da etapa de reclassificação).
+Recuperação TF-IDF (baseline, strict): dev R@50 96.0% (480/500), R@10 91.0%,
+R@1 60.2% (69.4% identical-aware); test R@50 97.2% (208/214), R@10 94.4%,
+R@1 65.0% (70.6% identical-aware). Em 12 das 214 notícias o ouro não está no
+top-10 (limite estrutural da etapa de reclassificação).
 
 Tabelas completas (dev/test, strict e identical-aware) em `avaliacao_canonica.csv`
 e `avaliacao_canonica.json`, geradas por `scripts/99_avaliacao_canonica.py`.

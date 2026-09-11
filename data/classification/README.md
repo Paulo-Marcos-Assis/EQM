@@ -5,9 +5,10 @@
 | Arquivo | Registros | Descrição |
 |---|---|---|
 | `Complete_dataset_11309.csv` | **11.309** | Dataset completo rotulado (pré-deduplicação) |
-| `CONSOLIDATED_EQM_DEDUPED.csv` | **10.379** | Consolidado após deduplicação rigorosa |
-| `train.csv` | 6.642 | Split de treino (9,01% positivos) |
-| `dev.csv` | 1.643 | Split de desenvolvimento |
+| `CONSOLIDATED_EQM.csv` | **11.133** | Consolidado (dedup de links + filtro >200 chars) — Task 1 |
+| `CONSOLIDATED_EQM_DEDUPED.csv` | **10.379** | Consolidado após deduplicação rigorosa (Task 1b) |
+| `train.csv` | 6.642 | Split de treino (8,88% positivos) |
+| `dev.csv` | 1.643 | Split de desenvolvimento (9,01% positivos) |
 | `test.csv` | 2.046 | Split de teste (acessado uma única vez) |
 | `SPLIT_REPORT.txt` | — | Relatório da divisão (leakage check: 0 links sobrepostos) |
 | `DISTRIBUTION_REPORT.txt` | — | Distribuição por portal/domínio |
@@ -33,6 +34,6 @@ para evitar vazamento.
 
 ## Reprodução / pipeline
 
-Consulte `2-classification/README.md`. Para reconstruir `CONSOLIDATED_EQM_DEDUPED.csv`
-e os splits a partir de `Complete_dataset_11309.csv`, execute
-`task1_consolidate_eda.py` → `task1b_rigorous_dedup.py` → `task2_split.py`.
+Consulte `2-classification/README.md`. Para reconstruir `CONSOLIDATED_EQM.csv`,
+`CONSOLIDATED_EQM_DEDUPED.csv` e os splits a partir de `Complete_dataset_11309.csv`,
+execute `task1_consolidate_eda.py` → `task1b_rigorous_dedup.py` → `task2_split.py`.

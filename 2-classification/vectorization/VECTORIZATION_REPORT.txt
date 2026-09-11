@@ -1,0 +1,23 @@
+============================================================
+VECTORIZATION REPORT — NEW_EQM_Classifier (Task 4)
+============================================================
+
+tfidf:
+  train: 6642 x 10000
+  dev: 1643 x 10000
+  test: 2046 x 10000
+tfidf_stem:
+  train: 6642 x 10000
+  dev: 1643 x 10000
+  test: 2046 x 10000
+bertimbau_base:
+  train: 6642 x 768
+  dev: 1643 x 768
+  test: 2046 x 768
+bertimbau_large:
+  train: 6642 x 1024
+  dev: 1643 x 1024
+  test: 2046 x 1024
+
+TF-IDF (no stem + RSLP stem) fitted on TRAIN only; dev/test transform() only (no data leak).
+BERTimbau: mean pooling of last layer excluding padding tokens.

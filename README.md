@@ -55,9 +55,10 @@ EQM/
 2. **Classificação** (`2-classification/`) — vencedor: TF-IDF + LinearSVC
    (dev F1 0,9764; test F1 0,9563; robusto cross-portal).
 3. **Extração** (`3-extraction/`) — 3 abordagens; melhor: LLM estruturado
-   (acurácia média strict match 91,45%; F1 médio 89,86% — média dos 4 atributos,
-   Tabela 3 do SBBD; ver `data/extraction/DOCUMENTACAO.md` para as métricas
-   recalculadas com a validação manual do objeto).
+   (acurácia média strict match 91,45% e F1 médio 89,86%, média dos 4 atributos —
+   Tabela 3 do SBBD; com a validação manual do atributo *objeto* documentada em
+   `data/extraction/DOCUMENTACAO.md`, o teste recalcula para **Ac 90,82% /**
+   **F1 94,44%**).
 4. **Vinculação** (`4-linkage/`) — híbrido RAG: extração LLM + pré-filtro SQL +
    recuperação TF-IDF + rerank LLM (single-call `gpt-oss:20b` 76,8% dev /
    76,2% test, 163/214; melhor no teste entre os cinco modelos avaliados:
@@ -66,7 +67,8 @@ EQM/
 ## Datasets
 
 - **Classificação**: `data/classification/Complete_dataset_11309.csv` (11.309 notícias
-  rotuladas, 968 positivas) + `CONSOLIDATED_EQM_DEDUPED.csv` (10.379) + splits.
+  rotuladas, 968 positivas) + `CONSOLIDATED_EQM.csv` (11.133, pré-deduplicação) +
+  `CONSOLIDATED_EQM_DEDUPED.csv` (10.379) + splits.
 - **Extração**: `data/extraction/Gabarito.csv` (796 notícias anotadas; 600 dev + 196 test).
 - **Vinculação**: o benchmark sintético (714 pares) **não é publicado** por ética;
   regeneração determinística via prompts/configs/scripts de `4-linkage/` (seed 42).
@@ -89,6 +91,8 @@ cd 4-linkage && pip install -r requirements.txt && make bench-both && make dev &
 
 Hardware usado: AMD EPYC 9654 (96 núcleos, 1,5 TB RAM) + NVIDIA RTX A6000 (48 GB VRAM,
 CUDA 12.8). Modelos via Ollama: `gpt-oss:20b`, `gemma4:31b`, `qwen3.8:27b`,
-`qwen3.5:latest`, `qwen2.5:7b` (avaliados; variantes também exploradas `qwen2.5:14b`,
-`qwen3:8b`, `gemma3:12b`). Embeddings de recuperação: `bert-base-portuguese-cased`,
-`neuralmind/bert-large-portuguese-cased` e `tcepi/helbert-base` (HelBERT).
+`qwen3.5:latest`, `qwen2.5:7b` (avaliados no rerank; variantes também exploradas
+`qwen2.5:14b` e `qwen3:8b` nos scripts, e `gemma3:12b` na extração auxiliar de
+município/modalidade do benchmark de teste). Embeddings de recuperação:
+`bert-base-portuguese-cased`, `neuralmind/bert-large-portuguese-cased` e
+`tcepi/helbert-base` (HelBERT).

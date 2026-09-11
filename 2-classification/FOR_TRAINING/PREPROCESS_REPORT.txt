@@ -1,0 +1,24 @@
+============================================================
+PREPROCESS REPORT — NEW_EQM_Classifier (Task 3)
+============================================================
+
+Branches:
+  Heavy no-stem  : Pre_processed_for_Sparse/*_preprocessed.csv
+  Heavy RSLP-stem: Pre_processed_for_Sparse_Stem/*_preprocessed_stem.csv
+  Light (BERTimbau): Pre_processed_for_Embeddings/*_bert.csv
+
+heavy_train   : rows= 6,642 pos= 590 (8.88%) neg= 6,052 empty_processed=0
+heavy_dev     : rows= 1,643 pos= 148 (9.01%) neg= 1,495 empty_processed=0
+heavy_test    : rows= 2,046 pos= 180 (8.80%) neg= 1,866 empty_processed=0
+stem_train    : rows= 6,642 pos= 590 (8.88%) neg= 6,052 empty_processed=0
+stem_dev      : rows= 1,643 pos= 148 (9.01%) neg= 1,495 empty_processed=0
+stem_test     : rows= 2,046 pos= 180 (8.80%) neg= 1,866 empty_processed=0
+light_train   : rows= 6,642 pos= 590 (8.88%) neg= 6,052 empty_processed=0
+light_dev     : rows= 1,643 pos= 148 (9.01%) neg= 1,495 empty_processed=0
+light_test    : rows= 2,046 pos= 180 (8.80%) neg= 1,866 empty_processed=0
+
+Policy notes:
+  - Numbers/monetary values protected as single tokens (Task 4 tokenizer)
+  - Hyphenated compounds NOT split
+  - Stopwords: curated list (source NEW_training), accent-normalized
+  - Lemmatization NOT implemented (documented gap); RSLP = stemming only

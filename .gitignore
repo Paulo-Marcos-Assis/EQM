@@ -38,6 +38,7 @@ Thumbs.db
 2-classification/vectorization/*
 2-classification/training/results/*
 !2-classification/vectorization/.gitkeep
+!2-classification/vectorization/VECTORIZATION_REPORT.txt
 !2-classification/training/results/.gitkeep
 
 # Arquivos grandes do linkage (a política de cada subpasta está em 4-linkage/.gitignore)

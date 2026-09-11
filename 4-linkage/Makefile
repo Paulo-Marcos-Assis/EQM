@@ -119,23 +119,13 @@ test: bench-test indexes extract rerank
 # ============================================================
 
 clean:
-	rm -rf results/ models/ benchmarks/*.json benchmarks/*.csv
+	rm -rf models/ benchmarks/*.json benchmarks/*.csv
+	find results -type f ! -name 'README.md' ! -name 'avaliacao_canonica.csv' ! -name 'avaliacao_canonica.json' -delete 2>/dev/null || true
 	find . -type d -name "__pycache__" -exec rm -rf {} + 2>/dev/null || true
 	find . -name "*.pyc" -delete 2>/dev/null || true
-	find . -name "*.pyo" -delete 2>/dev/null || true
 	@echo "Cleaned generated outputs."
 
 clean-all: clean
 	rm -rf data/*.csv data/*.json data/test/
 	rm -rf noticias_simuladas/*.csv noticias_simuladas/*.json noticias_simuladas/*.log
 	@echo "Cleaned ALL generated data (including benchmark inputs)."
-
-# ============================================================
-# PAPER COMPILATION
-# ============================================================
-
-paper:
-	cd paper/reviewers/sbc_template && latexmk -pdf sbc.tex
-
-paper-clean:
-	cd paper/reviewers/sbc_template && latexmk -C
