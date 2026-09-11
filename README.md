@@ -1,4 +1,4 @@
-# EQM — Extração, Questionamento e Monitoramento
+# EQM — Exame de Qualificação de Mestrado
 
 Pipeline completo para **detecção de fraudes em licitações públicas** a partir de
 notícias jornalísticas de Santa Catarina: coleta (crawler), classificação binária,
