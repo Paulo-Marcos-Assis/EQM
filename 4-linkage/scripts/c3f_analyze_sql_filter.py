@@ -141,7 +141,7 @@ def main():
     mun_ok = sum(1 for x in noticias if x.get("municipio_correto"))
     mod_ok = sum(1 for x in noticias if x.get("modalidade_correta"))
     ambos = sum(1 for x in noticias if x.get("municipio_correto") and x.get("modalidade_correta"))
-    print(f"Extração (gemma3:12b) vs gold — {n} itens:")
+    print(f"Extração vs gold — {n} itens:")
     print(f"  município  correto: {mun_ok}/{n} ({mun_ok/n:.1%})")
     print(f"  modalidade correta: {mod_ok}/{n} ({mod_ok/n:.1%})")
     print(f"  ambos corretos    : {ambos}/{n} ({ambos/n:.1%})")
